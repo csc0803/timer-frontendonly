@@ -1,0 +1,12 @@
+# 忽略 IDE 設定檔
+.idea/
+.vscode/
+
+# 忽略建置產出
+target/
+node_modules/
+dist/
+
+# 忽略環境變數與敏感資訊
+.env
+application-local.properties
