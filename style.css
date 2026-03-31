@@ -1,0 +1,132 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #4d586e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: relative; /* 確保它在圓圈上面 */
+  z-index: 10;
+  background: white;
+  padding: 2rem; /* 稍微縮小 padding，否則內容會太擠 */
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 450px; /* 固定寬度 */
+  height: 450px; /* 固定高度 */
+
+  /* 讓 container 內部的內容也垂直居中 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.field input {
+  width: 60px;
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #333;
+  transition: all 0.3s ease;
+  outline: none; /* 去掉預設的藍色外框 */
+}
+
+.field input:hover {
+  border-color: #b0b0b0;
+}
+
+.field input:focus {
+  border-color: #007bff; /* 使用你選的經典藍 */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  background-color: #f8fbff;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.field label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-transform: uppercase; /* 讓文字更有設計感 */
+}
+
+.display-section {
+  margin: 20px 0;
+}
+
+#timer-text {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#lap-text {
+  font-size: 2rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+.button-group button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.btn-load {
+  background-color: #007bff;
+  color: white;
+}
+.btn-load:hover {
+  background-color: #0056b3;
+}
+
+.btn-start {
+  background-color: #4caf50;
+  color: white;
+}
+.btn-start:hover {
+  background-color: #45a049;
+}
+.btn-pause {
+  background-color: #ff9800;
+  color: white;
+} /* 暫停時變橘色 */
+.btn-reset {
+  background-color: #f44336;
+  color: white;
+}
