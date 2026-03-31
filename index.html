@@ -1,11 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pure FrontEnd Timer</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⏱️</text></svg>"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Timer</h1>
+      <div class="input-group">
+        <div class="field">
+          <label>Hours</label>
+          <input type="number" id="input-hr" value="0" min="0" />
+        </div>
+        <div class="field">
+          <label>Minutes</label>
+          <input type="number" id="input-min" value="0" min="0" max="59" />
+        </div>
+        <div class="field">
+          <label>Seconds</label>
+          <input type="number" id="input-sec" value="10" min="0" max="59" />
+        </div>
+        <div class="field">
+          <label>Laps</label>
+          <input type="number" id="input-laps" value="1" min="1" />
+        </div>
+      </div>
+
+      <div class="display-section">
+        <div id="timer-text">00:00:10</div>
+        <div id="lap-text">Remain Lap：1</div>
+      </div>
+
+      <div class="button-group">
+        <button id="btn-load" class="btn-load">Load</button>
+        <button id="btn-start-pause" class="btn-start">Start</button>
+        <button id="btn-reset" class="btn-reset">Clear</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
